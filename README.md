@@ -147,6 +147,11 @@ This project would not be possible without the support by these amazing folks. [
 <a href="https://opencollective.com/react-boilerplate/backer/8/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/8/avatar.svg"></a>
 <a href="https://opencollective.com/react-boilerplate/backer/9/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/9/avatar.svg"></a>
 
+## React Boiler Plate in Docker(Assumption - you how docker works and is already installed on machine)
+- Depending on how you want to use the boiler plate in the docker update Dockerfile
+- Navigate to the project folder on terminal window
+- Run `docker build -t <<Your Tag Name For The Image>> .`
+- Run `docker run -p <<Port of your choice>>:3000 <<Your Tag Name For The Image>>`
 
 ## License
 
