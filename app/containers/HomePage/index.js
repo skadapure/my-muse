@@ -16,11 +16,8 @@ import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H2 from 'components/H2';
-import ReposList from 'components/ReposList';
 import AtPrefix from './AtPrefix';
-import CenteredSection from './CenteredSection';
 import Form from './Form';
-import Input from './Input';
 import Section from './Section';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
@@ -40,30 +37,21 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   }
 
   render() {
-    const { loading, error, repos } = this.props;
-    const reposListProps = {
-      loading,
-      error,
-      repos,
-    };
-
     return (
       <article>
         <Helmet>
           <title>Non Eggetarian</title>
-          <meta name="description" content="A React.js Boilerplate application homepage" />
+          <meta name="description" content="Eggless recipies homepage" />
         </Helmet>
         <div>
-          <CenteredSection>
-            <H2>
-              <FormattedMessage {...messages.startProjectHeader} />
-            </H2>
-            <p>
-              <FormattedMessage {...messages.startProjectMessage} />
-            </p>
-          </CenteredSection>
-          <Section>
-            <H2>
+          <H2 style={{ marginBottom: '1rem', marginTop: '0' }}>
+            <FormattedMessage {...messages.startProjectHeader} />
+          </H2>
+          <p style={{ textAlign: 'left' }}>
+            <FormattedMessage {...messages.startProjectMessage} />
+          </p>
+          <Section style={{ marginBottom: '1rem', marginTop: '0' }}>
+            <H2 style={{ marginBottom: '1rem', marginTop: '0' }}>
               <FormattedMessage {...messages.trymeHeader} />
             </H2>
             <Form onSubmit={this.props.onSubmitForm}>
@@ -72,16 +60,15 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                 <AtPrefix>
                   <FormattedMessage {...messages.trymeAtPrefix} />
                 </AtPrefix>
-                <Input
+                {/* <Input
                   id="username"
                   type="text"
                   placeholder="mxstbr"
                   value={this.props.username}
                   onChange={this.props.onChangeUsername}
-                />
+                /> */}
               </label>
             </Form>
-            <ReposList {...reposListProps} />
           </Section>
         </div>
       </article>
@@ -90,18 +77,8 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 }
 
 HomePage.propTypes = {
-  loading: PropTypes.bool,
-  error: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.bool,
-  ]),
-  repos: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.bool,
-  ]),
   onSubmitForm: PropTypes.func,
   username: PropTypes.string,
-  onChangeUsername: PropTypes.func,
 };
 
 export function mapDispatchToProps(dispatch) {
