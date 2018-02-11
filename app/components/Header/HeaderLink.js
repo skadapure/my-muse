@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export default styled(Link)`
   display: inline-flex;
-  padding: 0.25em 2em;
-  margin: 1em;
+  padding: 0.1em .6em;
+  margin: .75em;
   text-decoration: none;
   border-radius: 4px;
   -webkit-font-smoothing: antialiased;
@@ -21,5 +21,9 @@ export default styled(Link)`
   &:active {
     background: #DCDCDC;
     color: #000;
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 `;

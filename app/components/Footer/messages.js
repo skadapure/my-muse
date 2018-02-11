@@ -16,4 +16,8 @@ export default defineMessages({
       Made with love by {author}.
     `,
   },
+  copyrightMessage: {
+    id: 'boilerplate.components.Footer.author.copyright',
+    defaultMessage: '2018, Non-Eggetarian',
+  },
 });
