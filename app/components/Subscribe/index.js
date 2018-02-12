@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from 'components/Input';
 import Form from 'components/Form';
+import Button from 'components/Button';
 
 function Subscribe() {
   return (
@@ -11,6 +12,7 @@ function Subscribe() {
         placeholder="mxstbr"
         value="email id"
       />
+      <Button>Subscribe</Button>
     </Form>
   );
 }

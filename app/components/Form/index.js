@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 const Form = styled.form`
-  margin-bottom: 1em;
+  @media (min-width: 750px) {
+    margin-left: .75rem;
+    display: inline;
+  }
+  text-align: left;
 `;
 
 export default Form;

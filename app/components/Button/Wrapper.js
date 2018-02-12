@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 100%;
+  padding: 0.1rem 0.6rem;
   text-align: center;
-  margin: 4em 0;
+  display: inline;
 `;
 
 export default Wrapper;

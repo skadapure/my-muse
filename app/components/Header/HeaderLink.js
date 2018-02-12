@@ -2,9 +2,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default styled(Link)`
+  @media (min-width: 425px) {
+    margin: 0.75rem;
+  }
   display: inline-flex;
   padding: 0.1em .6em;
-  margin: .75em;
+  margin: .25em;
   text-decoration: none;
   border-radius: 4px;
   -webkit-font-smoothing: antialiased;

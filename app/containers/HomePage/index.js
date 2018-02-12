@@ -16,8 +16,6 @@ import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H2 from 'components/H2';
-import Form from 'components/Form';
-import AtPrefix from './AtPrefix';
 import Section from './Section';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
@@ -54,21 +52,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             <H2 style={{ marginBottom: '1rem', marginTop: '0' }}>
               <FormattedMessage {...messages.trymeHeader} />
             </H2>
-            <Form onSubmit={this.props.onSubmitForm}>
-              <label htmlFor="username">
-                <FormattedMessage {...messages.trymeMessage} />
-                <AtPrefix>
-                  <FormattedMessage {...messages.trymeAtPrefix} />
-                </AtPrefix>
-                {/* <Input
-                  id="username"
-                  type="text"
-                  placeholder="mxstbr"
-                  value={this.props.username}
-                  onChange={this.props.onChangeUsername}
-                /> */}
-              </label>
-            </Form>
           </Section>
         </div>
       </article>

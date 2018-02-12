@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 const Input = styled.input`
   outline: none;
-  border-bottom: 1px dotted #999;
+  border: 1px solid;
+  font-size: large;
+  vertical-align: middle;
+  margin-left: .75rem;
 `;
 
 export default Input;
