@@ -10,7 +10,7 @@ function Subscribe() {
         id="username"
         type="text"
         placeholder="mxstbr"
-        value="email id"
+        defaultValue="email id"
       />
       <Button>Subscribe</Button>
     </Form>
