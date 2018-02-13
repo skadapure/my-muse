@@ -7,7 +7,7 @@ export default styled(Link)`
   }
   display: inline-flex;
   padding: 0.1em .6em;
-  margin: .55em;
+  margin: .45em;
   text-decoration: none;
   border-radius: 4px;
   -webkit-font-smoothing: antialiased;
@@ -17,15 +17,12 @@ export default styled(Link)`
   outline: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
+  font-weight: bold;
   border: 1px solid #000000;
   color: #000000;
 
   &:active {
     background: #DCDCDC;
     color: #000;
-  }
-
-  &:hover {
-    text-decoration: underline;
   }
 `;
