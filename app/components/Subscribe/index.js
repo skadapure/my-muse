@@ -5,7 +5,7 @@ import Button from 'components/Button';
 
 function Subscribe() {
   return (
-    <Form>
+    <Form style={{ marginBottom: "1rem" }}>
       <Input
         id="username"
         type="text"

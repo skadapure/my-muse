@@ -16,6 +16,7 @@ import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import Subscribe from 'components/Subscribe';
 
 const AppWrapper = styled.div`
   max-width: calc(768px + 16px * 2);
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="/recepies" component={FeaturePage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
+        <Subscribe />
         <Footer />
       </AppWrapper>
     </div>
