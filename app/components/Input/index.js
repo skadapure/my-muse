@@ -6,6 +6,11 @@ const Input = styled.input`
   font-size: large;
   vertical-align: middle;
   border-radius: 4px;
+  color: #808080;
+
+  &:focus {
+    color: #000000;
+  }
 `;
 
 export default Input;

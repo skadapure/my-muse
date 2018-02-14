@@ -1,6 +1,7 @@
 import { css } from 'styled-components';
 
 const buttonStyles = css`
+  vertical-align: middle;
   display: inline-block;
   box-sizing: border-box;
   padding: 0.1em .6em;
@@ -16,7 +17,6 @@ const buttonStyles = css`
   font-weight: bold;
   border: 1px solid #000000;
   color: #000000;
-
   &:active {
     background: #696969;
     color: #000;
