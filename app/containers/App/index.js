@@ -39,7 +39,7 @@ export default function App() {
           titleTemplate="%s - Eggless Recipies"
           defaultTitle="Eggless Recipies"
         >
-          <meta name="description" content="A React.js Boilerplate application" />
+          <meta name="description" content="A recipe site for eggless baking" />
         </Helmet>
         <Switch>
           <Route exact path="/" component={HomePage} />
