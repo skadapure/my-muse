@@ -63,7 +63,7 @@ class Subscribe extends React.Component {
           type="text"
           placeholder="email id"
           onChange={this.handleChange}
-          style={{ minWidth: '200px' }}
+          style={{ maxWidth: '200px' }}
         />
         <Button
           onClick={this.subscribe}
