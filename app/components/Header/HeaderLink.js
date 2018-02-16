@@ -7,7 +7,7 @@ export default styled(Link)`
   }
   display: inline-flex;
   padding: 0.1em .6em;
-  margin: .45em;
+  margin: .40rem;
   text-decoration: none;
   border-radius: 4px;
   -webkit-font-smoothing: antialiased;
