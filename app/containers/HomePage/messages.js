@@ -12,7 +12,7 @@ export default defineMessages({
   },
   startProjectMessage: {
     id: 'boilerplate.containers.HomePage.start_project.message',
-    defaultMessage: 'A recipe blog focussed on eggless cooking of food which are other wise made with eggs',
+    defaultMessage: 'This site is a place for creative eggless baking of food which are otherwise made with eggs. Our intention of this blog to help people who do not eat eggs due to health or religious reasons, but help them get the cook the same food with out eggs',
   },
   trymeHeader: {
     id: 'boilerplate.containers.HomePage.tryme.header',

@@ -45,7 +45,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <H2 style={{ marginBottom: '1rem', marginTop: '0' }}>
             <FormattedMessage {...messages.startProjectHeader} />
           </H2>
-          <p style={{ textAlign: 'left' }}>
+          <p style={{ textAlign: 'justify' }}>
             <FormattedMessage {...messages.startProjectMessage} />
           </p>
           <Section style={{ marginBottom: '1rem', marginTop: '0' }}>

@@ -11,7 +11,8 @@ import H2 from 'components/H2';
 import messages from './messages';
 
 const Introduction = styled.section`
-  margin-bottom: 1rem;
+  text-align: justify;
+  margin-bottom: 2rem;
   margin-top: 1rem;
 `;
 
@@ -22,7 +23,9 @@ export default function AboutPage() {
         <FormattedMessage {...messages.header} />
       </H2>
       <Introduction>
-        <FormattedMessage {...messages.introduction} />
+        <p>
+          <FormattedMessage {...messages.introduction} />
+        </p>
       </Introduction>
     </article>
   );

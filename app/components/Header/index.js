@@ -10,7 +10,7 @@ import messages from './messages';
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div style={{ marginBottom: '1rem' }}>
+      <div style={{ marginBottom: '1rem', marginTop: '1rem' }}>
         <NavBar>
           <HeaderLink to="/">
             <FormattedMessage {...messages.home} />
