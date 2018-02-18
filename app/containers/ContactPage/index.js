@@ -1,5 +1,5 @@
 /**
- * About
+ * Contact
  *
  * This is the page we show when the user visits a url that doesn't have a route
  */
@@ -12,7 +12,7 @@ import messages from './messages';
 export default function ContactPage() {
   return (
     <MainMessage header={messages.header} detail={messages.message}>
-      <A href="mailto:noneggetarian@gmail.com">noneggetarian@gmail.com</A>
+      <A href="mailto:noneggetarian@gmail.com" style={{ marginLeft: '0' }}>noneggetarian@gmail.com</A>
     </MainMessage>
   );
 }

@@ -17,7 +17,7 @@ describe('<About />', () => {
     expect(renderedComponent.find(MainMessage).length).toBe(1);
     expect(renderedComponent.find(MainMessage).contains(
       <MainMessage header={messages.header} detail={messages.message}>
-        <A href="mailto:noneggetarian@gmail.com">noneggetarian@gmail.com</A>
+        <A href="mailto:noneggetarian@gmail.com" style={{ marginLeft: '0' }}>noneggetarian@gmail.com</A>
       </MainMessage>
     )).toBe(true);
     expect(renderedComponent.find(A).length).toBe(1);

@@ -4,22 +4,18 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { FormattedMessage } from 'react-intl';
 
-import H2 from 'components/H2';
+import MainMessage from 'components/MainMessage';
 import About from '../index';
-
+import messages from '../messages';
 describe('<About />', () => {
-  it('should render the About text', () => {
+  it('should render About us', () => {
     const renderedComponent = shallow(
       <About />
     );
+    expect(renderedComponent.find(MainMessage).length).toBe(1);
     expect(renderedComponent.contains(
-      <H2 style={{ marginTop: '0px' }}>
-        <FormattedMessage
-          id="boilerplate.containers.AboutPage.header"
-          defaultMessage={'About Us'}
-        />
-      </H2>)).toEqual(true);
+      <MainMessage header={messages.header} detail={messages.introduction} />
+    )).toBe(true);
   });
 });
