@@ -4,22 +4,22 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { FormattedMessage } from 'react-intl';
 
-import H2 from 'components/H2';
-import About from '../index';
-
+import A from 'components/A';
+import MainMessage from 'components/MainMessage';
+import Contact from '../index';
+import messages from '../messages';
 describe('<About />', () => {
-  it('should render the About text', () => {
+  it('should render Contact details', () => {
     const renderedComponent = shallow(
-      <About />
+      <Contact />
     );
-    expect(renderedComponent.contains(
-      <H2 style={{ marginTop: '0px' }}>
-        <FormattedMessage
-          id="boilerplate.containers.ContactPage.header"
-          defaultMessage={'Contact'}
-        />
-      </H2>)).toEqual(true);
+    expect(renderedComponent.find(MainMessage).length).toBe(1);
+    expect(renderedComponent.find(MainMessage).contains(
+      <MainMessage header={messages.header} detail={messages.message}>
+        <A href="mailto:noneggetarian@gmail.com">noneggetarian@gmail.com</A>
+      </MainMessage>
+    )).toBe(true);
+    expect(renderedComponent.find(A).length).toBe(1);
   });
 });

@@ -2,7 +2,7 @@
  * A link to a certain page, an anchor tag
  */
 
-import React from 'react';
+import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
@@ -18,6 +18,7 @@ function Message(props) {
       <Detail>
         <p>
           <FormattedMessage {...props.detail} />
+          {Children.toArray(props.children)}
         </p>
       </Detail>
     </article>
@@ -27,6 +28,7 @@ function Message(props) {
 Message.propTypes = {
   header: PropTypes.object,
   detail: PropTypes.object,
+  children: PropTypes.node,
 };
 
 export default Message;

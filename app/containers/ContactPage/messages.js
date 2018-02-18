@@ -11,6 +11,6 @@ export default defineMessages({
   },
   message: {
     id: 'boilerplate.containers.ContactPage.contact',
-    defaultMessage: 'Like what I do?  Hit me up at ',
+    defaultMessage: 'Like what I do?  You can always mail me at ',
   },
 });
