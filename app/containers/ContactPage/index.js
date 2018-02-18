@@ -23,7 +23,7 @@ export default function ContactPage() {
         <FormattedMessage {...messages.header} />
       </H2>
       <Introduction>
-        <FormattedMessage {...messages.message} /><A href="mailto:noneggetarian@gmail.com">noneggetarian@gmail.com</A>
+        <FormattedMessage {...messages.message} /><A href="mailto:noneggetarian@gmail.com" style={{ marginLeft: '0px' }}>noneggetarian@gmail.com</A>
       </Introduction>
     </article>
   );

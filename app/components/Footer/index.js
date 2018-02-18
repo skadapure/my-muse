@@ -7,7 +7,7 @@ import messages from './messages';
 
 function Footer() {
   return (
-    <Wrapper style={{ padding: '1rem 0' }}>
+    <Wrapper style={{ padding: '0.25rem' }}>
       <section style={{ width: '100%', fontSize: 'x-small' }}>
         <code>&copy;</code>
         <FormattedMessage {...messages.copyrightMessage} />
