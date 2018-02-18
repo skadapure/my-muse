@@ -11,9 +11,9 @@ function Footer() {
       <section style={{ width: '100%', fontSize: 'x-small' }}>
         <code>&copy;</code>
         <FormattedMessage {...messages.copyrightMessage} />
-        <div style={{ display: 'inline', marginLeft: '1rem', borderTop: 'border-bottom: 1px solid #666;' }}>
+        <div style={{ display: 'inline', marginLeft: '1rem' }}>
           <span>
-            <A>Disclosure</A>
+            <A href="/disclosure">Disclosure</A>
           </span>
           <span> | </span>
           <span>
