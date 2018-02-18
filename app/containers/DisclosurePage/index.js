@@ -17,7 +17,6 @@ export default function DisclosurePage() {
       <Message header={messages.personalHeader} detail={messages.personal} />
       <Message header={messages.nonpersonalHeader} detail={messages.nonpersonal} />
       <Message header={messages.cookiesHeader} detail={messages.cookies} />
-      <Message header={messages.howHeader} detail={messages.how} />
       <Message header={messages.protectHeader} detail={messages.protect} />
       <Message header={messages.shareHeader} detail={messages.share} />
       <Message header={messages.thirdPartyHeader} detail={messages.thirdParty} />

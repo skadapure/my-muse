@@ -15,6 +15,6 @@ describe('Disclosure Page', () => {
       <DisclosurePage />
     );
     expect(renderedComponent.find(MainMessage).length).toBe(1);
-    expect(renderedComponent.find(Message).length).toBe(9);
+    expect(renderedComponent.find(Message).length).toBe(8);
   });
 });
