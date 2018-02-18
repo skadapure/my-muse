@@ -15,7 +15,8 @@ import { createStructuredSelector } from 'reselect';
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
-import H2 from 'components/H2';
+import H3 from 'components/H3';
+import MainMessage from 'components/MainMessage';
 import Section from './Section';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
@@ -42,16 +43,11 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <meta name="description" content="Eggless recipies homepage" />
         </Helmet>
         <div>
-          <H2 style={{ marginBottom: '1rem', marginTop: '0' }}>
-            <FormattedMessage {...messages.startProjectHeader} />
-          </H2>
-          <p style={{ textAlign: 'justify' }}>
-            <FormattedMessage {...messages.startProjectMessage} />
-          </p>
+          <MainMessage header={messages.startProjectHeader} detail={messages.startProjectMessage} />
           <Section style={{ marginBottom: '1rem', marginTop: '0' }}>
-            <H2 style={{ marginBottom: '1rem', marginTop: '0' }}>
+            <H3 style={{ marginBottom: '1rem', marginTop: '0' }}>
               <FormattedMessage {...messages.trymeHeader} />
-            </H2>
+            </H3>
           </Section>
         </div>
       </article>
