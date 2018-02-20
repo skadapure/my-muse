@@ -32,7 +32,7 @@ class Subscribe extends React.Component {
 
   postEmailId(emailid, scope) {
     return axios({
-      url: 'https://6tdxaipp5a.execute-api.us-east-1.amazonaws.com/prod/dummy',
+      url: process.env.SUBSCRIBE_EMAIL_API,
       timeout: 20000,
       method: 'post',
       data: {

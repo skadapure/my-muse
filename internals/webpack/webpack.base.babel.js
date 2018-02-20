@@ -94,6 +94,7 @@ module.exports = (options) => ({
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        SUBSCRIBE_EMAIL_API: JSON.stringify(process.env.SUBSCRIBE_EMAIL_API),
       },
     }),
     new webpack.NamedModulesPlugin(),
