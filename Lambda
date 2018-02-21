@@ -1,0 +1,79 @@
+'use strict';
+
+console.log('Loading function');
+
+var AWS = require('aws-sdk');
+var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+var datetime = JSON.stringify(new Date());
+let date = datetime.split('T')[0];
+let count = 0;
+
+
+/**
+ * Demonstrates a simple HTTP endpoint using API Gateway. You have full
+ * access to the request and response payload, including headers and
+ * status code.
+ *
+ * To scan a DynamoDB table, make a GET request with the TableName as a
+ * query string parameter. To put, update, or delete an item, make a POST,
+ * PUT, or DELETE request respectively, passing in the payload to the
+ * DynamoDB API as a JSON body.
+ */
+exports.handler = (event, context, callback) => {
+    let emailid = JSON.parse(event.body).emailid;
+    const done = (err, res) => callback(null, {
+        statusCode: err ? '400' : '200',
+        body: err ? err.message : JSON.stringify(res),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    const addEmail = (err, res) => {
+        if(err) {callback(err, null) }
+        else {
+            dynamodb.putItem({
+            "TableName": process.env.EMAIL_TABLE,
+            "Item" : {
+                "emailid": {"S": emailid},
+                "date": {"S": datetime}
+            }
+        }, done);
+        }
+    }
+    const updateSubscriptionCountForTheDay = (date, count) => {
+            let strCount = count.toString();
+            console.log(strCount);
+            dynamodb.putItem({
+            "TableName": process.env.EXECUTION_COUNT,
+            "Item" : {
+                "date": {"S": date},
+                "count": {"N": strCount}
+        }
+        }, (err, data) => addEmail(err, data));
+    }
+    switch (event.httpMethod) {
+        case 'POST':
+            var params = {
+              Key: {
+               "date": {
+                 S: date
+                }
+              }, 
+              TableName: process.env.EXECUTION_COUNT
+            };
+            
+            console.log(date);
+            dynamodb.getItem(params, function(err, data) {
+               if (err) { callback(`Table does not exist "${event.httpMethod}"`, null) } // an error occurred
+               else {
+                    console.log(data);
+                    count = data.Item ? parseInt(data.Item.count.N) : 0;
+                    if(count < 100) { updateSubscriptionCountForTheDay(date, count+1); }
+                    else { callback("Too many subscriptions for today", null) }
+               }
+            }); 
+            break;
+        default:
+            done(new Error(`Unsupported method "${event.httpMethod}"`));
+    }
+};
