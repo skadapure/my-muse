@@ -16,7 +16,7 @@ function Message(props) {
       <H4>
         <FormattedMessage {...props.header} />
       </H4>
-      { props.header &&
+      { props.src &&
         <div style={{ marginLeft: '-0.45rem', fontColor: 'red' }}>
           <Player src={props.src} />
         </div>
