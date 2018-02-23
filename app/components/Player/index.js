@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Media, Player, controls } from 'react-media-player';
 const { PlayPause } = controls;
 
@@ -15,7 +16,7 @@ class MediaPlayer extends React.Component {
       <Media>
         <div className="media">
           <div className="media-player">
-            <Player src="https://s3.amazonaws.com/noneggatarian-audio/disclosure/disclosure_npii.mp3" vendor="audio" />
+            <Player src={this.props.src} vendor="audio" />
           </div>
           <div className="media-controls">
             <PlayPause style={{ fontWeight: 'bold' }} />
@@ -25,5 +26,9 @@ class MediaPlayer extends React.Component {
     );
   }
 }
+
+MediaPlayer.propTypes = {
+  src: PropTypes.string,
+};
 
 export default MediaPlayer;
