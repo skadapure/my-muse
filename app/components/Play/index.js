@@ -12,6 +12,8 @@ class Play extends React.Component {
       playStatus: 'STOPPED',
     };
   }
+
+  /* TODO - Fix <a> role / tabindex. Use button instead */
   render() {
     return (
       <div>
@@ -27,7 +29,8 @@ class Play extends React.Component {
             } else if (this.state.playStatus === 'PAUSED' || this.state.playStatus === 'STOPPED') {
               this.setState({ playStatus: 'PLAYING' });
             }
-            console.log(this.state.playStatus);
+            // console.log(this.state.playStatus);
+            // console.log(this.props.setCurrent);
           }}
         >
           {this.state.playStatus === 'PLAYING' && this.props.isVoiceEnabled && <img src={StopIcon} alt="Stop" />}

@@ -12,7 +12,7 @@ class SoundPlayer extends React.Component {
   }
   render() {
     return (
-      <Sound url={this.props.url} playStatus={this.props.playStatus} />
+      <Sound url={this.props.url} playStatus={this.props.playStatus} onFinishedPlaying={this.props.onFinishedPlaying} />
     );
   }
 }
@@ -20,6 +20,7 @@ class SoundPlayer extends React.Component {
 SoundPlayer.propTypes = {
   url: PropTypes.string.isRequired,
   playStatus: PropTypes.string.isRequired,
+  onFinishedPlaying: PropTypes.func,
 };
 
 export default SoundPlayer;
