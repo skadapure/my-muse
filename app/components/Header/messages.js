@@ -10,9 +10,9 @@ export default defineMessages({
     id: 'boilerplate.components.Header.home',
     defaultMessage: 'Home',
   },
-  recepies: {
-    id: 'boilerplate.components.Header.recepies',
-    defaultMessage: 'Recepies',
+  recipes: {
+    id: 'boilerplate.components.Header.recipes',
+    defaultMessage: 'Recipes',
   },
   about: {
     id: 'boilerplate.components.Header.about',

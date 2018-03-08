@@ -37,14 +37,14 @@ export default function App() {
       <Header />
       <AppWrapper>
         <Helmet
-          titleTemplate="%s - Eggless Recipies"
-          defaultTitle="Eggless Recipies"
+          titleTemplate="%s - Eggless Recipes"
+          defaultTitle="Eggless Recipes"
         >
           <meta name="description" content="A recipe site for eggless baking" />
         </Helmet>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/recepies" component={FeaturePage} />
+          <Route path="/recipes/*" component={FeaturePage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/disclosure" component={DisclosurePage} />
