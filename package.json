@@ -194,7 +194,9 @@
       "!app/*/*/Loadable.{js,jsx}",
       "!app/components/Subscribe/*",
       "!app/components/VoiceInput/*",
-      "!app/components/Play/*"
+      "!app/components/Play/*",
+      "!app/components/RecipeBrief/*",
+      "!app/containers/RecipesPage/*"
     ],
     "coverageThreshold": {
       "global": {

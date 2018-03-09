@@ -6,7 +6,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
@@ -17,10 +16,9 @@ import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H3 from 'components/H3';
-import A from 'components/A';
+import RecipeBrief from 'components/RecipeBrief';
 import MainMessage from 'components/MainMessage';
 import Section from './Section';
-import Img from './Img';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
@@ -30,37 +28,7 @@ import saga from './saga';
 import egglessPancakes from '../../recipes/eggless-pancakes';
 // import pancake from egglessPancakes.image;
 
-const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media (max-width: 750px) {
-    min-height: 200px;
-  }
-  @media (min-width: 750px) {
-    flex-direction: row;
-    max-height: 150px;
-  }
-`;
-
-const RecipeText = styled.div`
-  flex: 1 1 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: justify;
-  @media (min-width: 750px) {
-    margin-left: 1rem;
-    margin-top: 0;
-  }
-`;
-
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  constructor(props) {
-    super(props);
-    this.state = {
-      firstRecipe: egglessPancakes,
-      firstRecipePath: egglessPancakes.path,
-    };
-  }
   /**
    * when initial state username is not null, submit the form to load repos
    */
@@ -84,10 +52,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
               <FormattedMessage {...messages.trymeHeader} />
             </H3>
           </Section>
-          <Div>
-            <Img image={this.state.firstRecipe.image} />
-            <RecipeText>{this.state.firstRecipe.shortDescription}<A href={this.state.firstRecipePath} style={{ marginLeft: '1rem' }}>show more...</A></RecipeText>
-          </Div>
+          <RecipeBrief recipe={egglessPancakes} />
         </div>
       </article>
     );
