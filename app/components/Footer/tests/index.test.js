@@ -11,7 +11,7 @@ describe('<Footer />', () => {
     expect(renderedComponent.find('span').length).toBe(3);
     // TODO: fix assertion
     // expect(renderedComponent.contains(
-    //   <section style={{ width: '100%', fontSize: 'x-small' }}>
+    //   <section style={{ width: '100%', fontSize: 'small' }}>
     //     <code>&copy;</code>
     //     <FormattedMessage {...messages.copyrightMessage} />
     //     <div style={{ display: 'inline', marginLeft: '1rem', borderTop: 'border-bottom: 1px solid #666;' }}>

@@ -10,7 +10,7 @@ import RecipeBrief from '../index';
 import egglessPancakes from '../../../recipes/eggless-pancakes';
 
 const renderComponent = () => shallow(
-  <RecipeBrief recipe={egglessPancakes} />
+  <RecipeBrief recipeDetails={egglessPancakes} />
 );
 
 describe('Recipe Brief Component', () => {

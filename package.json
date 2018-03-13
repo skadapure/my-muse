@@ -196,7 +196,9 @@
       "!app/components/VoiceInput/*",
       "!app/components/Play/*",
       "!app/components/RecipeBrief/*",
-      "!app/containers/RecipesPage/*"
+      "!app/containers/RecipesPage/*",
+      "!app/containers/RecipePage/*",
+      "!app/recipes/*"
     ],
     "coverageThreshold": {
       "global": {

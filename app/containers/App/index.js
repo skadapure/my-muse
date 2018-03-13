@@ -13,7 +13,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import RecipesPage from 'containers/RecipesPage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import RecipePage from 'containers/RecipePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import AboutPage from 'containers/AboutPage/Loadable';
 import ContactPage from 'containers/ContactPage/Loadable';
@@ -46,7 +46,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/recipes" component={RecipesPage} />
-          <Route path="/recipes/*" component={FeaturePage} />
+          <Route path="/recipes/*" component={RecipePage} pathName={window.location.pathName} />
           <Route path="/about" component={AboutPage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/disclosure" component={DisclosurePage} />

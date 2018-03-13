@@ -31,16 +31,23 @@ const RecipeText = styled.div`
   }
 `;
 
-export default function RecipeBrief(props) {
-  return (
-    <Div>
-      <Img image={props.recipe.image} />
-      <RecipeText>{props.recipe.shortDescription}<A href={props.recipe.path} style={{ marginLeft: '1rem' }}>show more...</A></RecipeText>
-    </Div>
-  );
+class RecipeBrief extends React.PureComponent {
+  render() {
+    return (
+      <Div>
+        <Img image={this.props.recipeDetails.image} />
+        <RecipeText>{this.props.recipeDetails.shortDescription}<A
+          href={this.props.recipeDetails.path}
+          style={{ marginLeft: '1rem' }}
+        >show more...</A></RecipeText>
+      </Div>
+    );
+  }
 }
 
 RecipeBrief.propTypes = {
-  recipe: PropTypes.object.isRequired,
+  recipeDetails: PropTypes.object.isRequired,
 };
+
+export default RecipeBrief;
 

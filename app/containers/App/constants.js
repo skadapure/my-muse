@@ -13,3 +13,7 @@ export const LOAD_REPOS = 'boilerplate/App/LOAD_REPOS';
 export const LOAD_REPOS_SUCCESS = 'boilerplate/App/LOAD_REPOS_SUCCESS';
 export const LOAD_REPOS_ERROR = 'boilerplate/App/LOAD_REPOS_ERROR';
 export const DEFAULT_LOCALE = 'en';
+export const RECIPE = 'RECIPE';
+export const RECIPE_SUCCESS = 'RECIPE_SUCCESS';
+export const RECIPE_ERROR = 'RECIPE_ERROR';
+
