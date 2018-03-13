@@ -11,7 +11,6 @@ import Play from 'components/Play';
 import H4 from './H4';
 
 function Message(props) {
-  // console.log(props.setCurrent);
   return (
     <article>
       <H4>

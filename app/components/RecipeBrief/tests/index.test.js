@@ -16,7 +16,6 @@ const renderComponent = () => shallow(
 describe('Recipe Brief Component', () => {
   it('should render a recipe', () => {
     const renderedComponent = renderComponent();
-    console.log(renderComponent);
     expect(renderedComponent.find('Img').length).toBe(1);
   });
 });

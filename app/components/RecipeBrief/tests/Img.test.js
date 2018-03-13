@@ -15,7 +15,6 @@ const renderComponent = () => mount(
 describe('Img Component', () => {
   it('should render a Img', () => {
     const renderedComponent = renderComponent();
-    console.log(JSON.stringify(renderComponent));
     expect(renderedComponent.find('Img').length).toBe(1);
   });
 });

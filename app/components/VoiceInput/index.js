@@ -7,7 +7,6 @@ import DisabledMicro from './disablemicrophone.png';
 class VoiceInput extends React.Component {
   constructor(props) {
     super(props);
-    // console.log(JSON.stringify(props));
     this.state = {
       isVoiceEnabled: false,
       previous: -1,
@@ -34,15 +33,12 @@ class VoiceInput extends React.Component {
   onResult(e) {
     if (!this.recognition || this.state.playStatus === 'PLAYING') return;
     const transcript = this.getLastTranscript(e.results);
-    // console.log('Result ' + transcript);
 
     let prev = 0;
     let curr = 0;
     let next = 0;
     switch (transcript.trim()) {
       case 'next':
-        // console.log('executing next -' + transcript);
-        // console.log(this.state.next);
         if (!(this.state.next > this.props.audios.length)) {
           prev = this.state.previous + 1;
           curr = this.state.current + 1;
@@ -57,14 +53,12 @@ class VoiceInput extends React.Component {
         }
         break;
       case 'repeat':
-        // console.log('executing repeat');
         this.setState({
           playStatus: 'PLAYING',
         });
         this.recognition.stop();
         break;
       case 'last':
-        // console.log('executing previous - ' + prev);
         if (this.state.previous > 0) {
           prev = this.state.previous - 1;
           curr = this.state.current - 1;
@@ -79,13 +73,11 @@ class VoiceInput extends React.Component {
         }
         break;
       default:
-        // console.log('DEFAULT ' + transcript);
         break;
     }
   }
 
   getLastTranscript(results) {
-    // console.log(JSON.stringify(results));
     return results[results.length - 1][0].transcript;
   }
 
@@ -115,14 +107,12 @@ class VoiceInput extends React.Component {
         <button
           onClick={() => {
             if (this.state.isVoiceEnabled) {
-              // console.log('stopping microphone');
               this.recognition.stop();
               this.setState({
                 isVoiceEnabled: false,
                 playStatus: 'STOPPED',
               });
             } else {
-              // console.log('starting microphone');
               this.setState({
                 previous: -1,
                 current: 0,
@@ -143,7 +133,6 @@ class VoiceInput extends React.Component {
             this.setState({
               playStatus: 'STOPPED',
             });
-            // console.log('FINISHED');
             this.recognition.start();
           }}
         />
