@@ -15,7 +15,6 @@ export default function DisclosurePage() {
   return (
     <article>
       <MainMessage header={messages.header} detail={messages.general} />
-
       <Message header={messages.personalHeader} detail={messages.personal} />
       <Message header={messages.nonpersonalHeader} detail={messages.nonpersonal} />
       <Message header={messages.cookiesHeader} detail={messages.cookies} />

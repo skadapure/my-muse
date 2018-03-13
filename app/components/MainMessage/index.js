@@ -16,10 +16,8 @@ function Message(props) {
         <FormattedMessage {...props.header} />
       </H3>
       <Detail>
-        <p>
-          <FormattedMessage {...props.detail} />
-          {Children.toArray(props.children)}
-        </p>
+        <FormattedMessage {...props.detail} />
+        {Children.toArray(props.children)}
       </Detail>
     </article>
   );
