@@ -28,9 +28,7 @@ describe('Message Component', () => {
           <FormattedMessage {...messages.header} />
         </H3>
         <Detail>
-          <p>
-            <FormattedMessage />
-          </p>
+          <FormattedMessage />
         </Detail>
       </article>
     )).toBe(true);
