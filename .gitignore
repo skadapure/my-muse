@@ -5,6 +5,7 @@ node_modules
 stats.json
 .vscode
 .env
+*.pem
 # Cruft
 .DS_Store
 npm-debug.log

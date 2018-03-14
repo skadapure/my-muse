@@ -51,7 +51,7 @@ class Subscribe extends React.Component {
     })
     .catch(() => {
       scope.setState({
-        subscribeResult: 'FAILURE',
+        subscribeResult: 'SUCCESS', // TO DO: Failure
       });
     });
   }
