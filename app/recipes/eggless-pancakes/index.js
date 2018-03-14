@@ -1,7 +1,7 @@
 
 export default ({
   path: 'recipes/eggless-pancakes',
-  title: 'Eggless-Pancakes',
+  title: 'Eggless Pancakes',
   shortDescription: 'Pancakes are undoubtedly one of the most liked breakfast. Kids have  special craving for these. I have always wanted to try those but unfortunately those traditionally have eggs in them. I finally decided to give it a try to make them with out eggs. After multiple attempts I came out with a recipe. I hope you guys give this a try.',
   image: 'https://s3.amazonaws.com/noneggatarian-images/pancake.jpg',
   details: 'The prep work for pancakes is simple and should take you about 10-15 minutes. There is no real egg substitute for this but I did use a pinch of baking soda to make it fluffier. The pan should not be over-heated or else the pancakes will blacken. To get that nice golden color I usually keep the knob at 4. Optionally, you can add a couple of blueberries to the batter or about 1/2 a cup of nuts, fruits or chocolate chips.',
